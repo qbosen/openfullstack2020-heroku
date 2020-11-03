@@ -9,3 +9,9 @@ GET http://localhost:3001/api/person/4
 
 ### get person not exist
 GET http://localhost:3001/api/person/5
+
+### delete person exist
+DELETE http://localhost:3001/api/person/4
+
+### delete person not exist
+DELETE http://localhost:3001/api/person/5
