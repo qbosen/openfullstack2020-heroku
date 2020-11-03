@@ -3,3 +3,9 @@ GET http://localhost:3001/api/persons
 
 ### get info
 GET http://localhost:3001/info
+
+### get person exist
+GET http://localhost:3001/api/person/4
+
+### get person not exist
+GET http://localhost:3001/api/person/5
