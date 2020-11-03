@@ -24,3 +24,12 @@ Content-Type: application/json
   "name":"Zhang san",
   "number":"123456"
 }
+
+### add new person with empty number
+POST http://localhost:3001/api/person
+Content-Type: application/json
+
+{
+  "name":"Zhang san",
+  "number":""
+}

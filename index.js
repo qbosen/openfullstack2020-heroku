@@ -50,6 +50,11 @@ app.post('/api/person', ((req, res) => {
             error: 'name or number missing'
         })
     }
+    if (persons.filter(it => it.name === person.name).length !== 0) {
+        return res.status(400).json({
+            error: 'name must be unique'
+        })
+    }
     console.log('post add', person)
     person.id = Math.floor(Math.random() * 10e9)
     persons = persons.concat(person)
