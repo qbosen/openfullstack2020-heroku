@@ -26,7 +26,9 @@ Access to XMLHttpRequest at 'http://localhost:3001/persons' from origin 'http://
 
 1. sign up heroku
 2. install `brew install heroku/brew/heroku`
-3. [heroku reference](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)
+3. [how to deploy heroku](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)
     1. `heroku create` login and create heroku app
     2. `git remote -v` confirm remote
     3. `git push heroku master` deploy code
+    4. `heroku logs -t` get logs
+4. heroku online app link (https://afternoon-beyond-12909.herokuapp.com/) [Test api](https://afternoon-beyond-12909.herokuapp.com/api/persons)
