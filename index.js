@@ -5,6 +5,7 @@ const cors = require('cors')
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static('build'))
 
 morgan.token('post', (req, _) => {
     if (req.method === 'POST') {
@@ -40,7 +41,7 @@ let persons = [
 app.get('/api/persons', (req, res) => {
     res.json(persons)
 })
-app.get('/api/person/:id', (req, res) => {
+app.get('/api/persons/:id', (req, res) => {
     const id = Number(req.params.id)
     const person = persons.find(p => p.id === id)
 
@@ -50,12 +51,12 @@ app.get('/api/person/:id', (req, res) => {
         res.status(404).end()
     }
 })
-app.delete('/api/person/:id', (req, res) => {
+app.delete('/api/persons/:id', (req, res) => {
     const id = Number(req.params.id)
     persons = persons.filter(note => note.id !== id)
     res.status(204).end()
 })
-app.post('/api/person', ((req, res) => {
+app.post('/api/persons', ((req, res) => {
     const person = req.body
     if (!person.name || !person.number) {
         return res.status(400).json({
